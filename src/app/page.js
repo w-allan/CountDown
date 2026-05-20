@@ -1,5 +1,8 @@
 "use client" // Tells the router this is a client side component
 import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import gh from '../lib/images/gh.png'
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input"
 import {
@@ -50,6 +53,11 @@ export default function Home() {
           </div>
           <Button variant="secondary" size="lg" onClick={decCount}>Decrement</Button>
         </Card>
+        <div className="flex items-center justify-center">
+          <Link href="https://github.com/w-allan">
+            <Image src={gh} alt="Github Logo" width={30} className="m-2"/>
+          </Link>
+        </div>
       </div>
     </div>
   );
